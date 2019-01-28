@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Introduction Programming</title>
+<meta name="author" content="(Jan Boone and Misja Mikkers)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/sky.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Introduction Programming</h1><h2 class="author">Jan Boone and Misja Mikkers</h2><p class="date">Created: 2019-01-28 Mon 11:11</p>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orgcbe26b2">Introduction</a></li>
+<li><a href="#/slide-orge258ff2">markdown</a></li>
+<li><a href="#/slide-org61b467d">Second part of lecture</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+
+<section>
+<section id="slide-orgcbe26b2">
+<h2 id="orgcbe26b2">Introduction</h2>
+<div class="outline-text-2" id="text-orgcbe26b2">
+</div>
+</section>
+<section id="slide-org096cb81">
+<h3 id="org096cb81">Don't panic</h3>
+<ul>
+<li>this is a programming course</li>
+<li>we know that many of you are not too keen on computers (beyond MS Office)</li>
+<li>this will be a gentle introduction to open source software</li>
+<li>it will not become too sophisticated</li>
+<li>it is meant for everyone to understand</li>
+<li>especially, if you never did any programming before</li>
+
+</ul>
+
+
+</section>
+<section id="slide-org74c6509">
+<h3 id="org74c6509">Why this course?</h3>
+<ul>
+<li>mainly to teach you to use your computer better</li>
+<li>to be able to use open source ("free") software</li>
+<li>to solve problems together with readable documentation on how you solved
+it ("reproducible research")</li>
+<li>on this last point, office products like excel score rather badly</li>
+<li>you will use R and python in courses in the years to come</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb6ed33a">
+<h3 id="orgb6ed33a">Who teaches this course?</h3>
+<ul>
+<li>In 2018-2019 this course is taught by:
+<ul>
+<li>Santiago Bohorquez Correa</li>
+<li>Jan Boone</li>
+<li>Mark Klik</li>
+<li>Misja Mikkers</li>
+<li>Marius-Lucian Prisacuta</li>
+<li>Cheyenne Ramada</li>
+
+</ul></li>
+
+</ul>
+
+
+</section>
+<section id="slide-org6691750">
+<h3 id="org6691750">How do we teach this course?</h3>
+<ul>
+<li>on line lectures on Datacamp</li>
+<li>tutorials: with plenty of time to ask questions
+<ul>
+<li>there are a number of "regular" tutorials and one in the computer lab</li>
+<li>if you do not have a laptop, attend the tutorial in the computer lab</li>
+<li>if you do have a laptop, attend your regular tutorial group</li>
+<li>no need to attend both!</li>
+<li>we may drop some tutorial groups, so check Blackboard!</li>
+
+</ul></li>
+<li>schedule can be found <a href="https://janboone.github.io/programming_for_economists/pages/schedule/">here</a></li>
+<li>we can track your progress on datacamp</li>
+<li>assignment notebooks to be made before the class</li>
+<li>class notebooks that we do together in class (to allow you to ask questions)</li>
+
+</ul>
+
+</section>
+<section id="slide-orge0844a6">
+<h3 id="orge0844a6">Information about the course</h3>
+<ul>
+<li>all information about the course can be found <a href="http://janboone.github.io/programming_for_economists/pages/">here</a></li>
+<li>pay attention to:
+<ul>
+<li><a href="https://janboone.github.io/programming_for_economists/pages/schedule/">the schedule</a>: explaining when you need to do what</li>
+<li><a href="https://janboone.github.io/programming_for_economists/pages/exam/">the rules for the exam</a> explaining how the exam works and a practice exam</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org0c0764e">
+<h3 id="org0c0764e">Your grade</h3>
+<p>
+There are two separate ways to earn your grade
+</p>
+
+<ul>
+<li>regular route:
+<ul>
+<li>midterm on python</li>
+<li>end of semester exam on R</li>
+
+</ul></li>
+
+<li>resit
+<ul>
+<li>exam on python and R combined</li>
+
+</ul></li>
+
+</ul>
+
+<p>
+You cannot use grades from one route for the other one.
+</p>
+
+</section>
+<section id="slide-orge47dd14">
+<h3 id="orge47dd14">Exam</h3>
+<ul>
+<li>for more information see the <a href="https://janboone.github.io/programming_for_economists/pages/exam/">exam page</a>
+<ul>
+<li>check the instructions for the exam</li>
+<li>do not open your exam file after you have finished</li>
+<li>if you do, your exam will not be graded (even if you did not change anything)</li>
+
+</ul></li>
+
+<li>at the exam you can freely copy and paste from the assignments we did in class</li>
+<li>we will not post answers to the assignments</li>
+<li>make sure you attend the tutorials and pay attention in class!</li>
+
+</ul>
+
+</section>
+<section id="slide-org1d34209">
+<h3 id="org1d34209">Datacamp</h3>
+<ul>
+<li>you need to sign up for Datacamp!</li>
+<li>for details see <a href="http://janboone.github.io/programming_for_economists/pages/index.html">the heading Important</a></li>
+<li>note the <b>deadline</b> for filling in the webform!</li>
+<li>if you miss the deadline, you will have to pay for premium content on
+Datacamp yourself</li>
+
+</ul>
+
+</section>
+<section id="slide-org7f8b762">
+<h3 id="org7f8b762">Github</h3>
+<ul>
+<li>github allows you to store files "in the cloud"</li>
+<li>signing up for github is optional</li>
+<li>if you do sign up, you can ask us questions via the <a href="https://github.com/janboone/programming_for_economists/issues">issues page</a> also during the exam</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orge258ff2">
+<h2 id="orge258ff2">markdown</h2>
+<div class="outline-text-2" id="text-orge258ff2">
+</div>
+</section>
+<section id="slide-org2e9baac">
+<h3 id="org2e9baac">syntax</h3>
+<ul>
+<li>markdown allows you to create structure in a simple way</li>
+<li>examples are:</li>
+
+</ul>
+
+<pre class="example">
+    # this is a heading
+
+
+    ## subheading
+
+
+    * first bullet
+    * second bullet
+
+    [link text](actual link, e.g. http://www.etc)
+
+    ![Alt text for image](/path/to/img.jpg "Optional title")
+</pre>
+
+<ul>
+<li>look on the web for other syntax like footnotes etc.</li>
+<li>equations you can type in latex</li>
+
+</ul>
+
+
+</section>
+<section id="slide-orgfdd0b81">
+<h3 id="orgfdd0b81">latex</h3>
+<ul>
+<li>latex is great word processing software</li>
+<li>for now, we only need it to write math</li>
+<li>you can guess what the following will do:</li>
+
+</ul>
+
+<pre class="example">
+$x^2$, $\beta$, $\sqrt{9}$, $\frac{1}{2}$, $\bar x$
+
+\begin{equation}
+
+a^2 + b^2 = c^2
+
+\end{equation}
+</pre>
+
+<ul>
+<li>if you need something, just google; e.g. "google latex phi" or
+"google latex empty set" etc.</li>
+<li>and try it out in the jupyter notebook</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org61b467d">
+<h2 id="org61b467d">Second part of lecture</h2>
+<div class="outline-text-2" id="text-org61b467d">
+</div>
+</section>
+<section id="slide-orgf610583">
+<h3 id="orgf610583">go to the server and start a jupyter notebook</h3>
+<ul>
+<li><a href="https://janboone.github.io/programming_for_economists/pages/">link to the server</a></li>
+<li>address to copy/paste in the google form</li>
+<li>importing the python material</li>
+<li>(this is also the way you will import your exam)</li>
+<li>evaluating cells</li>
+<li>you can choose python/R kernel</li>
+<li>getting help: ? and TAB</li>
+<li>code vs. markdown cell</li>
+<li>type some latex</li>
+
+</ul>
+
+</section>
+<section id="slide-org22a493d">
+<h3 id="org22a493d">before you leave</h3>
+<ul>
+<li>do the steps under <a href="http://janboone.github.io/programming_for_economists/pages/index.html">the heading Important</a></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<p> Created by jan. </p>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+overview: true,
+width: 1200,
+height: 800,
+margin: 0.10,
+minScale: 0.50,
+maxScale: 2.50,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

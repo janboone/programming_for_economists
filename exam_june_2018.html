@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title></title>
+<!-- 2018-07-11 Wed 18:59 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Org-mode">
+<meta name="author" content="Jan Boone">
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+/* org mode styles on top of twbs */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 18px;
+    margin-bottom: 105px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 101px;
+    background-color: #f5f5f5;
+}
+
+footer > div {
+    padding: 10px;
+}
+
+footer p {
+    margin: 0 0 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#table-of-contents {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+blockquote p {
+    font-size: 18px;
+}
+
+pre {
+    font-size: 16px;
+}
+
+.footpara {
+    display: inline-block;
+}
+
+figcaption {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+/* from twbs docs */
+
+.bs-docs-sidebar.affix {
+    position: static;
+}
+@media (min-width: 768px) {
+    .bs-docs-sidebar {
+        padding-left: 20px;
+    }
+}
+
+/* All levels of nav */
+.bs-docs-sidebar .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+}
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+    padding-left: 19px;
+    color: #A1283B;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #A1283B;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+    padding-left: 18px;
+    font-weight: bold;
+    color: #A1283B;
+    background-color: transparent;
+    border-left: 2px solid #A1283B;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-docs-sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav > li > a:focus {
+    padding-left: 29px;
+}
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+/* Nav: third level (shown on .active) */
+.bs-docs-sidebar .nav .nav .nav {
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 40px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav .nav > li > a:focus {
+    padding-left: 39px;
+}
+.bs-docs-sidebar .nav .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav .nav > .active:focus > a {
+    padding-left: 38px;
+    font-weight: 500;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+    .bs-docs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    /* Widen the fixed sidebar */
+    .bs-docs-sidebar.affix,
+    .bs-docs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-docs-sidebar.affix {
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 20px;
+    }
+    .bs-docs-sidebar.affix-bottom {
+        position: absolute; /* Undo the static from mobile first approach */
+    }
+    .bs-docs-sidebar.affix .bs-docs-sidenav,.bs-docs-sidebar.affix-bottom .bs-docs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+}
+@media (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .bs-docs-sidebar.affix-bottom,
+    .bs-docs-sidebar.affix {
+        width: 263px;
+    }
+}
+</style>
+<script type="text/javascript">
+$(function() {
+    'use strict';
+
+    $('.bs-docs-sidebar li').first().addClass('active');
+
+    $(document.body).scrollspy({target: '.bs-docs-sidebar'});
+
+    $('.bs-docs-sidebar').affix();
+});
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  displayAlign: "center",
+  displayIndent: "2em",
+  messageStyle: "none",
+  "HTML-CSS": {
+    scale: 100,
+    styles: {
+      ".MathJax_Display": {
+        "font-size": "100%"
+      }
+    }
+  },
+  "SVG": {
+    scale: 100,
+    styles: {
+      ".MathJax_SVG_Display": {
+        "font-size": "100%",
+        "margin-left": "-2.281em"
+      }
+    }
+  }
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
+</head>
+<body>
+<div id="content" class="container">
+<div class="row"><div class="col-md-12"><h1 class="title"></h1>
+
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">exam June 7th, 2018</h2>
+<div class="outline-text-2" id="text-">
+<p>
+The jupyter notebook of the exam can be found <a href="./exam_june_7_2018.ipynb">here</a>. Right click on this link and then use something like "save link as".
+</p>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">price effects of mergers</h3>
+<div class="outline-text-3" id="text-">
+<p>
+We consider a merger in this notebook.
+</p>
+
+<p>
+First we calculate the equilibrium with three firms, denoted by 1, 2 and 3. Then firms 2 and 3 merge so that we are left with 2 firms; denoted by
+1 and 2.
+</p>
+
+<p>
+We calculate the effects of the merger on the equilibrium price.
+</p>
+
+<p>
+We start by importing the usual libraries.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #3a81c3;">import</span> matplotlib.pyplot <span style="color: #3a81c3;">as</span> plt
+<span style="color: #3a81c3;">import</span> pandas <span style="color: #3a81c3;">as</span> pd
+<span style="color: #3a81c3;">import</span> numpy <span style="color: #3a81c3;">as</span> np
+<span style="color: #3a81c3;">from</span> scipy <span style="color: #3a81c3;">import</span> optimize
+%matplotlib inline
+</pre>
+</div>
+
+<p>
+The following code helps to calculate the equilibrium for the case with
+3 firms. Note that you have seen similar code during the tutorials to
+calculate the equilibrium with 2 firms.
+</p>
+
+<p>
+We assume that before the merger each firm has constant marginal costs
+equal to 0.3. We assume a simple linear (inverse) demand curve of the
+form \(p=1-Q\) where \(p\) denotes price and \(Q\) total output on the market.
+Total output equals the sum of each firm's output: \(Q= q_1 + q_2+q_3\).
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #715ab1;">c0</span> = 0.3
+<span style="color: #715ab1;">vector_c</span> = [c0]*3
+
+<span style="color: #3a81c3;">def</span> <span style="color: #6c3163;">p</span>(Q):
+<span style="background-color: #ecf3ec;"> </span>   <span style="color: #3a81c3;">return</span> 1 - Q
+
+<span style="color: #3a81c3;">def</span> <span style="color: #6c3163;">costs</span>(q,c):
+<span style="background-color: #ecf3ec;"> </span>   <span style="color: #3a81c3;">return</span> c*q
+
+<span style="color: #3a81c3;">def</span> <span style="color: #6c3163;">profits</span>(q,Q_other,c):
+<span style="background-color: #ecf3ec;"> </span>   <span style="color: #3a81c3;">return</span> p(q+Q_other)*q-costs(q,c)
+
+<span style="color: #3a81c3;">def</span> <span style="color: #6c3163;">reaction</span>(Q_other,c):
+<span style="background-color: #ecf3ec;"> </span>   <span style="color: #715ab1;">q1</span> =  optimize.fminbound(<span style="color: #3a81c3;">lambda</span> x: -profits(x,Q_other,c),0,1,full_output=1)
+<span style="background-color: #ecf3ec;"> </span>   <span style="color: #3a81c3;">return</span> q1[0]
+
+<span style="color: #3a81c3;">def</span> <span style="color: #6c3163;">fixed_point_three_firms</span>(vector_q,vector_c):
+<span style="background-color: #ecf3ec;"> </span>   <span style="color: #3a81c3;">return</span> [vector_q[0]-reaction(vector_q[1]+vector_q[2],vector_c[0]),
+<span style="background-color: #ecf3ec;"> </span>   <span style="background-color: #ecf3ec;"> </span>   <span style="background-color: #ecf3ec;"> </span>   vector_q[1]-reaction(vector_q[0]+vector_q[2],vector_c[1]),
+<span style="background-color: #ecf3ec;"> </span>   <span style="background-color: #ecf3ec;"> </span>   <span style="background-color: #ecf3ec;"> </span>   vector_q[2]-reaction(vector_q[0]+vector_q[1],vector_c[2])]
+</pre>
+</div>
+</div>
+
+<ul class="org-ul"><li><a id="sec-" name="sec-"></a>a) [0.5 points] Show that total equilibrium output equals 0.525. Derive the equilibrium price and Herfindahl index; denote these by <code>P0</code> and <code>H0</code> resp.<br ><div class="outline-text-5" id="text-">
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #715ab1;">initial_guess_3</span> = [0,0,0]
+
+<span style="color: #715ab1;">Q0</span> = np.<span style="color: #3a81c3;">sum</span>(optimize.fsolve(<span style="color: #3a81c3;">lambda</span> q: fixed_point_three_firms(q,vector_c), initial_guess_3))
+<span style="color: #715ab1;">P0</span> = p(Q0)
+<span style="color: #715ab1;">H0</span> = 3*(1/3)**2
+
+<span style="color: #3a81c3;">print</span>(Q0)
+<span style="color: #3a81c3;">print</span>(P0)
+<span style="color: #3a81c3;">print</span>(H0)
+</pre>
+</div>
+
+<pre class="example">
+0.525
+0.475
+0.3333333333333333
+
+
+</pre>
+</div>
+</li>
+
+<li><a id="sec-" name="sec-"></a>b) [0.5 point] Define a function <code>fixed_point_two_firms</code> with the same structure as the function <code>fixed_point_three_firms</code> above, except that it derives the equilibrium output levels for a duopoly (two firms). Test this function by showing that each of the two firms produces 0.3333 in case both firms have zero costs.<br ><div class="outline-text-5" id="text-">
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #3a81c3;">def</span> <span style="color: #6c3163;">fixed_point_two_firms</span>(vector_q,vector_c):
+<span style="background-color: #ecf3ec;"> </span>   <span style="color: #3a81c3;">return</span> [vector_q[0]-reaction(vector_q[1],vector_c[0]),
+<span style="background-color: #ecf3ec;"> </span>   <span style="background-color: #ecf3ec;"> </span>   <span style="background-color: #ecf3ec;"> </span>   vector_q[1]-reaction(vector_q[0],vector_c[1])]
+
+optimize.fsolve(<span style="color: #3a81c3;">lambda</span> q: fixed_point_two_firms(q,[0,0]), [0,0])
+</pre>
+</div>
+
+<pre class="example">
+array([0.33333333, 0.33333333])
+
+</pre>
+
+<iframe width="640" height="360" src="https://tilburgutube.uvt.nl/asset/player/K1pOhctd5DdubTRJlMhOq2wO" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+<p>
+The Dutch competition authority, ACM, is asked to evaluate the effects
+of a merger between firms 2 and 3. Firms 2 and 3 claim that by merging
+they can reduce their constant marginal costs. But it is not clear by
+how much they will reduce their costs.
+</p>
+
+<p>
+The ACM assumes that the marginal cost level of the merged firm is
+uniformly distributed between 0 and the current marginal cost level
+<code>c0</code>. The merger will not affect the marginal cost level of firm 1 who
+does not merge. Firm 1's cost level remains <code>c0</code>.
+</p>
+
+<p>
+The next cell generates a vector of cost levels for the merged firm,
+denoted <code>c_after_merger</code>. Evaluate "c\_after\_merger" in a separate cell
+if you do not understand the command that defines it.
+</p>
+
+<p>
+Then it calculates the equilibrium output levels for (the non-merging)
+firm 1 and (the merged) firm 2.
+</p>
+
+<p>
+Note that you need to specify <code>initial_guess</code>.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #715ab1;">c_after_merger</span> = np.random.uniform(0,c0,size = 100)
+<span style="color: #715ab1;">initial_guess</span> = [0.1,0.1]
+<span style="color: #715ab1;">q1_after_merger</span> = [optimize.fsolve(<span style="color: #3a81c3;">lambda</span> q: fixed_point_two_firms(q,[c0,c]), initial_guess)[0] <span style="color: #3a81c3;">for</span> c <span style="color: #3a81c3;">in</span> c_after_merger]
+<span style="color: #715ab1;">q2_after_merger</span> = [optimize.fsolve(<span style="color: #3a81c3;">lambda</span> q: fixed_point_two_firms(q,[c0,c]), initial_guess)[1] <span style="color: #3a81c3;">for</span> c <span style="color: #3a81c3;">in</span> c_after_merger]
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="sec-" name="sec-"></a>c) [0.5 points] Create a dataframe called <code>df_after_merger</code> with three columns: <code>c_merged_firm</code>, <code>output_non_merging_firm</code>, <code>output_merged_firm</code> containing resp. the cost level of the merged firm, the output level of firm 1 and the output level of firm 2.<br ><div class="outline-text-5" id="text-">
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #715ab1;">columns</span> = [<span style="color: #2d9574;">'c_merged_firm'</span>,<span style="color: #2d9574;">'output_non_merging_firm'</span>,<span style="color: #2d9574;">'output_merged_firm'</span>]
+<span style="color: #715ab1;">df_after_merger</span> = pd.DataFrame(columns=columns)
+<span style="color: #3a81c3;">for</span> i <span style="color: #3a81c3;">in</span> <span style="color: #3a81c3;">range</span>(<span style="color: #3a81c3;">len</span>(c_after_merger)):
+<span style="background-color: #ecf3ec;"> </span>   <span style="color: #715ab1;">df_after_merger.loc</span>[i] = [c_after_merger[i], q1_after_merger[i],q2_after_merger[i]]
+
+df_after_merger.head()
+</pre>
+</div>
+
+<p>
+:RESULTS:
+</p>
+
+<pre class="example">
+   c_merged_firm  output_non_merging_firm  output_merged_firm
+0       0.166673                 0.188891            0.322218
+1       0.223555                 0.207852            0.284297
+2       0.045117                 0.148372            0.403255
+3       0.047302                 0.149101            0.401799
+4       0.128894                 0.176298            0.347404
+
+</pre>
+
+
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #715ab1;">df_after_merger</span> = pd.DataFrame({<span style="color: #2d9574;">'c_merged_firm'</span>:c_after_merger, <span style="color: #2d9574;">'output_non_merging_firm'</span>:q1_after_merger, <span style="color: #2d9574;">'output_merged_firm'</span>:q2_after_merger})
+df_after_merger.head()
+</pre>
+</div>
+
+<p>
+:RESULTS:
+</p>
+
+<pre class="example">
+   c_merged_firm  output_non_merging_firm  output_merged_firm
+0       0.166673                 0.188891            0.322218
+1       0.223555                 0.207852            0.284297
+2       0.045117                 0.148372            0.403255
+3       0.047302                 0.149101            0.401799
+4       0.128894                 0.176298            0.347404
+
+</pre>
+</div>
+</li>
+
+
+<li><a id="sec-" name="sec-"></a>d) [0.5 points] Add three columns to the dataframe with resp. total equilibrium output on the market, <code>Q</code>, equilibrium price, <code>P</code> and the Herfindahl index, <code>H</code>.<br ><div class="outline-text-5" id="text-">
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #715ab1;">df_after_merger</span>[<span style="color: #2d9574;">'Q'</span>]=df_after_merger.output_non_merging_firm+df_after_merger.output_merged_firm
+<span style="color: #715ab1;">df_after_merger</span>[<span style="color: #2d9574;">'P'</span>]=p(df_after_merger.Q)
+<span style="color: #715ab1;">df_after_merger</span>[<span style="color: #2d9574;">'H'</span>]=(df_after_merger.output_non_merging_firm/df_after_merger.Q)**2+(df_after_merger.output_merged_firm/df_after_merger.Q)**2
+
+df_after_merger.head()
+</pre>
+</div>
+
+<p>
+:RESULTS:
+</p>
+
+<pre class="example">
+   c_merged_firm  output_non_merging_firm  output_merged_firm         Q  \
+0       0.166673                 0.188891            0.322218  0.511109   
+1       0.223555                 0.207852            0.284297  0.492148   
+2       0.045117                 0.148372            0.403255  0.551628   
+3       0.047302                 0.149101            0.401799  0.550899   
+4       0.128894                 0.176298            0.347404  0.523702   
+
+          P         H  
+0  0.488891  0.534024  
+1  0.507852  0.512064  
+2  0.448372  0.606748  
+3  0.449101  0.605204  
+4  0.476298  0.553374  
+
+</pre>
+
+<iframe width="640" height="360" src="https://tilburgutube.uvt.nl/asset/player/yUxulMSdmgZdMiJfFy3XKt49" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+</div>
+</li>
+
+<li><a id="sec-" name="sec-"></a>e) [0.5 points] Make a histogram of the equilibrium price <code>P</code> after the merger. Also indicate in the histogram the equilibrium price before the merger <code>P0</code>. Label the horizontal axis with \(P\).<br ><div class="outline-text-5" id="text-">
+<p>
+[hint: you may want to use matplotlib's <code>hist</code>, <code>vlines</code> and <code>legend</code> to
+make this graph (e.g use google to find these functions); but feel free
+to use something else]
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-ipython">plt.hist(df_after_merger.P, normed=<span style="color: #4e3163;">True</span>, bins=30, label=<span style="color: #2d9574;">'after the merger'</span>)
+plt.vlines(P0,0,22, color = <span style="color: #2d9574;">'red'</span>, label=<span style="color: #2d9574;">'before merger'</span>)
+plt.legend()
+plt.xlabel(<span style="color: #2d9574;">'$P$'</span>)
+plt.show()
+</pre>
+</div>
+
+
+
+<figure>
+<p><img src="obipy-resources/7b7d1e5c2bf00e85b84a88e4794b98d1-Nts9mR.png" class="img-responsive" alt="7b7d1e5c2bf00e85b84a88e4794b98d1-Nts9mR.png">
+</p>
+</figure>
+</div>
+</li>
+
+
+<li><a id="sec-" name="sec-"></a>f) [0.5 points] Explain why sometimes the equilibrium price after the merger exceeds the equilibrium price before the merger and sometimes it is lower than the pre-merger price. [hint: there is a trade off between two effects, depending on which effect dominates, equilibrium price increases or decreases after the merger]<br ><div class="outline-text-5" id="text-">
+<p>
+If the merged firms' costs are close to their old value <code>c0</code>, then we
+only have the reduction in the number of firms and total output falls.
+In other words, due to a reduction in competition, the equilibrium price
+increases.
+</p>
+
+<p>
+If the merger firms' costs fall a lot due to the merger, this increases
+the merged firm's output level and hence increases total output on the
+market. This leads to a price reduction.
+</p>
+
+<iframe width="640" height="360" src="https://tilburgutube.uvt.nl/asset/player/G1dSYrLLKiTOQGFDkQxshvql" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+</div>
+</li>
+
+
+<li><a id="sec-" name="sec-"></a>g) [0.5 points] Make a graph with the Herfindahl index on the horizontal axis and the equilibrium price on the vertical axis. This is straightforward for \((H,P)\) after the merger as both values are in the dataframe. Add in another color, the pre-merger combination <code>(H0,P0)</code> that we calculated above.<br ><div class="outline-text-5" id="text-">
+<div class="org-src-container">
+
+<pre class="src src-ipython">plt.scatter(df_after_merger.H,df_after_merger.P,label=<span style="color: #2d9574;">'after merger'</span>)
+plt.scatter(H0,P0,label=<span style="color: #2d9574;">'before merger'</span>)
+plt.legend()
+plt.xlabel(<span style="color: #2d9574;">'$H$'</span>)
+plt.ylabel(<span style="color: #2d9574;">'$P$'</span>)
+plt.show()
+</pre>
+</div>
+
+
+
+<figure>
+<p><img src="obipy-resources/7b7d1e5c2bf00e85b84a88e4794b98d1-d8laCg.png" class="img-responsive" alt="7b7d1e5c2bf00e85b84a88e4794b98d1-d8laCg.png">
+</p>
+</figure>
+</div>
+</li>
+
+<li><a id="sec-" name="sec-"></a>h) [0.5 points] Use the graph under g) to discuss the relation between the Herfindahl index and the equilibrium price. To illustrate, some people think that lower values of the Herfindahl index are associated with more competitive outcome. Would you agree with this?<br ><div class="outline-text-5" id="text-">
+<p>
+On the one hand, the merger reduces the number of firms in the industry
+from 3 to 2; this increases the Herfindahl index and lowers competition.
+</p>
+
+<p>
+On the other hand, considering the points after the merger: H is lowest
+when the firms are symmetric (both have costs c0). Then the price is
+high. As the cost level of the merged firm falls, it produces more
+output which reduces the price. But the asymmetry in output levels
+increases H.
+</p>
+
+<iframe width="640" height="360" src="https://tilburgutube.uvt.nl/asset/player/P2MYbVbOlBS6XqX7ZGsS9WSL" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+</div>
+</li></ul>
+</div>
+</div>
+</div></div></div>
+<footer id="postamble" class="">
+<div><p class="author">Author: Jan Boone</p>
+<p class="date">Created: 2018-07-11 Wed 18:59</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 27.0.50 (<a href="http://orgmode.org">Org-mode</a> 9.1.7)</p>
+</div>
+</footer>
+</body>
+</html>

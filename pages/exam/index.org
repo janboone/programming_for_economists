@@ -1,0 +1,72 @@
+#+BEGIN_COMMENT
+.. title: Exam
+.. slug: exam
+.. date: 2018-11-26 17:44:50 UTC+01:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+* Grade
+
+Your grade is /either/ determined by:
+
++ the midterm exam which is python only (50%)
+
++ the exam will be R only (50%)
+
+/or/ by
+
++ the resit which is based on both python and R (100%)
+
+Each exam lasts 3 hours. You *cannot* combine the resit with the midterm etc.
+
+
+* Useful to know
+
+The questions that we ask in the exam are based on the notebooks that we discuss in class. Hence make sure that you have these ready before the exam. You are allowed to use copy-paste out of these notebooks.
+
+During the semester, you can use google to find information on functions, error messages etc. However, during the exam you can only access a limited number of pages.
+
+In particular, during the exam you work in a special exam environment on TiU computers. We have asked IT to whitelist the following websites:
+
++ the russet server (where you will do your exam)
++ github (to visit the course pages and ask questions during the exam at the [[https://github.com/janboone/programming_for_economists/issues][issues page]]
++ gitlab.uvt.nl (where you will import your exam from)
++ Blackboard (where we will give you the command to import the exam)
++ https://stackoverflow.com/
++ https://www.python.org/
++ http://www.numpy.org/
++ https://www.scipy.org/
++ https://pandas.pydata.org/
++ https://www.datacamp.com/home
++ http://www.cookbook-r.com/
++ https://dplyr.tidyverse.org/
++ https://rpubs.com/
++ https://www.rstudio.com/
++ https://r4ds.had.co.nz/
++ https://www.rdocumentation.org/
+
+
+* Exam procedure
+
++ we will post the exam both on github and on Blackboard
++ At the start of the exam, go to Blackboard and copy paste the code into a jupyter notebook that will clone the exam repository
++ alternatively, download the exam files from Blackboard on your computer and then upload them on the server
+
+** finishing your exam
+
++ make sure that we can easily see which notebook is your exam
+  + that is, do not rename the exam notebook (so that we do not know which notebook it is)
+  + do not have 5 different versions of the exam notebook; we will then choose one at random and grade this one
++ after you finish the exam, **do not re-open the notebook again**: we can see the last time the notebook was opened. If this is after you left the exam room, we can see this and will nullify your exam.
+
+
+* Practice exam
+
+If you want to practice, you can use a [[../../exam_june_2018.html][previous year python exam]] together with a discussion of the solution. Note that in previous years we used different notebooks in class. Hence, the solutions in the video's may look (slightly) different from the notebooks you have used yourself.
+
+Make sure that you make the exam yourself first. You do not learn to program by looking at the solutions.

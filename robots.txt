@@ -1,0 +1,4 @@
+Sitemap: https://janboone.github.io/programming_for_economists/pages/sitemapindex.xml
+
+User-Agent: *
+Host: janboone.github.io

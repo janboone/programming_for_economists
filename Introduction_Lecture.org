@@ -1,0 +1,172 @@
+#+Title: Introduction Programming
+#+Author: Jan Boone and Misja Mikkers
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: toc:1
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: cube
+#+REVEAL_THEME: sky
+#+REVEAL_HLEVEL: 1
+#+REVEAL_POSTAMBLE: <p> Created by jan. </p>
+
+
+
+* Introduction
+
+** Don't panic
+
+    - this is a programming course
+    - we know that many of you are not too keen on computers (beyond MS Office)
+    - this will be a gentle introduction to open source software
+    - it will not become too sophisticated
+    - it is meant for everyone to understand
+    - especially, if you never did any programming before
+
+
+** Why this course?
+
+    - mainly to teach you to use your computer better
+    - to be able to use open source ("free") software
+    - to solve problems together with readable documentation on how you solved
+      it ("reproducible research")
+    - on this last point, office products like excel score rather badly
+    - you will use R and python in courses in the years to come
+
+** Who teaches this course?
+
++ In 2018-2019 this course is taught by:
+  + Santiago Bohorquez Correa
+  + Jan Boone
+  + Mark Klik
+  + Misja Mikkers
+  + Marius-Lucian Prisacuta
+  + Cheyenne Ramada
+
+
+** How do we teach this course?
+
+    - on line lectures on Datacamp
+    - tutorials: with plenty of time to ask questions
+      - there are a number of "regular" tutorials and one in the computer lab
+      - if you do not have a laptop, attend the tutorial in the computer lab
+      - if you do have a laptop, attend your regular tutorial group
+      - no need to attend both!
+      - we may drop some tutorial groups, so check Blackboard!
+    - schedule can be found [[https://janboone.github.io/programming_for_economists/pages/schedule/][here]]
+    - we can track your progress on datacamp
+    - assignment notebooks to be made before the class
+    - class notebooks that we do together in class (to allow you to ask questions)
+
+** Information about the course
+
++ all information about the course can be found [[http://janboone.github.io/programming_for_economists/pages/][here]]
++ pay attention to:
+  + [[https://janboone.github.io/programming_for_economists/pages/schedule/][the schedule]]: explaining when you need to do what
+  + [[https://janboone.github.io/programming_for_economists/pages/exam/][the rules for the exam]] explaining how the exam works and a practice exam
+
+** Your grade
+
+There are two separate ways to earn your grade
+
++ regular route:
+  + midterm on python
+  + end of semester exam on R
+
++ resit
+  + exam on python and R combined
+
+You cannot use grades from one route for the other one.
+
+** Exam
+
++ for more information see the [[https://janboone.github.io/programming_for_economists/pages/exam/][exam page]]
+  + check the instructions for the exam
+  + do not open your exam file after you have finished
+  + if you do, your exam will not be graded (even if you did not change anything)
+
++ at the exam you can freely copy and paste from the assignments we did in class
++ we will not post answers to the assignments
++ make sure you attend the tutorials and pay attention in class!
+
+** Datacamp
+
+    - you need to sign up for Datacamp!
+    - for details see [[http://janboone.github.io/programming_for_economists/pages/index.html][the heading Important]]
+    - note the *deadline* for filling in the webform!
+    - if you miss the deadline, you will have to pay for premium content on
+      Datacamp yourself
+
+** Github
+
+- github allows you to store files "in the cloud"
+- signing up for github is optional
+- if you do sign up, you can ask us questions via the [[https://github.com/janboone/programming_for_economists/issues][issues page]] also during the exam
+
+* markdown
+
+** syntax
+
+- markdown allows you to create structure in a simple way
+- examples are:
+
+#+BEGIN_EXAMPLE
+    # this is a heading
+
+
+    ## subheading
+
+
+    * first bullet
+    * second bullet
+
+    [link text](actual link, e.g. http://www.etc)
+
+    ![Alt text for image](/path/to/img.jpg "Optional title")
+#+END_EXAMPLE
+
+- look on the web for other syntax like footnotes etc.
+- equations you can type in latex
+
+
+** latex
+
+- latex is great word processing software
+- for now, we only need it to write math
+- you can guess what the following will do:
+
+#+BEGIN_EXAMPLE
+$x^2$, $\beta$, $\sqrt{9}$, $\frac{1}{2}$, $\bar x$
+
+\begin{equation}
+
+a^2 + b^2 = c^2
+
+\end{equation}
+#+END_EXAMPLE
+
+- if you need something, just google; e.g. "google latex phi" or
+  "google latex empty set" etc.
+- and try it out in the jupyter notebook
+
+
+* Second part of lecture
+
+** go to the server and start a jupyter notebook
+
++ [[https://janboone.github.io/programming_for_economists/pages/][link to the server]]
++ address to copy/paste in the google form
++ importing the python material
++ (this is also the way you will import your exam)
++ evaluating cells
++ you can choose python/R kernel
++ getting help: ? and TAB
++ code vs. markdown cell
++ type some latex
+
+** before you leave
+
+  - do the steps under [[http://janboone.github.io/programming_for_economists/pages/index.html][the heading Important]]
+

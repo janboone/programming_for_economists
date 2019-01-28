@@ -1,0 +1,78 @@
+#+BEGIN_COMMENT
+.. title: Introduction
+.. slug: index
+.. date: 2018-11-26 17:23:02 UTC+01:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+
+
+* Team
+
+In 2018-2019 this course is taught by:
+
++ Santiago Bohorquez Correa
++ Jan Boone
++ Mark Klik
++ Misja Mikkers
++ Marius-Lucian Prisacuta
++ Cheyenne Ramada
+
+
+* Datacamp
+
+
+We are very happy that we partner with [[https://www.datacamp.com/][datacamp]] for this course to teach you both python and R.
+
+[[https://www.datacamp.com/about][Datacamp]] offers great on-line courses for you to learn R and python.
+
+
+* Important
+
+Things to do if you want to follow this course:
+
++ enroll in [[https://www.datacamp.com/][datacamp]] **with your Tilburg University email address**
++ go to the [[https://russet.uvt.nl/hub/home][russet server]]
++ log into the server and click on the green button "Start My Server"
++ copy the address from the address field in your browser (you need to paste this in a webform)
++ after you have done this, go to the webform:
++ and fill in [[https://goo.gl/forms/DH3wryCOPJtwyYpg1][this webform.]]
++ note that you need to fill in the webform **before February 8, 2019**
++ if you do not fill in the webform before the deadline, you *cannot* get a grade for this course
++ we use the webform also to plan the tutorials, keep an eye on BB before your first tutorial
++ optional: create a github account (this allows you to ask us questions; also during the exam). See below.
+
+* Questions
+
+If you have questions/comments about this course, go to the [[https://github.com/janboone/programming_for_economists/issues][issues page]]. Open a new issue (with the green "New issue" button) and type
+your question. Use a title that is informative (e.g. not "question",
+but "question about assignment 2"). Go to the next box ("Leave a
+comment") and type your question. Then click on "Submit new issue". We
+will answer your question as quickly as possible.
+
+Information that we need to answer your question:
+
++ say whether you are an ECO or EBE student
++ mention the group number of your tutorial and/or the name of your tutorial teacher
++ explain your question
+
+The advantages of the issue page include:
+
++ if you have a question, other students may have it as well; in this way we answer the questions in a way that everyone can see it. Also before asking the question, you may want to check whether it was asked/answered before on the issue page
++ we answer your question more quickly than when you email us
++ you can also use this during the exam
+
+Only when you need to include privately sensitive information ("my cat
+has passed away"), you can send an email.
+
+In order to post issues, you need to create a github account. Hence, we advice you to go to [[https://github.com/][github]] and create an account now.
+
+Note that if your question is related to another issue, you can react
+to the earlier issue and leave a comment in that "conversation".
+
+

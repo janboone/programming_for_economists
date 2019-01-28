@@ -1,0 +1,98 @@
+#+BEGIN_COMMENT
+.. title: Schedule
+.. slug: schedule
+.. date: 2018-11-26 17:44:50 UTC+01:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+
+#+END_COMMENT
+
+
+* First lecture
+
+[[../../Introduction_Lecture.html][Introduction Lecture]]
+
+* Before the first lecture
+
+
++ go to the [[https://russet.uvt.nl/hub/home][russet server]] and log in
++ create a new notebook by clicking on "New" in the (almost) top right corner
++ choose "Python 3"
++ In the first cell of this notebook, copy-paste the following code:
+
+~%%bash~
+
+~git clone https://gitlab.uvt.nl/janboone/release.git~
+
++ and press the keys "SHIFT" and "ENTER" at the same time ("ENTER" is sometimes called "RETURN")
++ the text appears "Cloning into 'release'..."
++ this adds a new folder called "release"; to see this go to "File" -> "Close and Halt"
++ if you click on the folder "release", you see that there are three sub-folders called "week1", "week2", "week3"
++ each folder has two notebooks, one called "assignment" the other "class"
++ the assignment notebook you make before class and we go (quickly) over it in class
++ the class notebook we do together in class and there will be plenty of time for you to answer questions.
+
+
+* Schedule
+
+The schedule for the course is as follows:
+
+| week | Datacamp             | preparation                      | in class                        |
+|------+----------------------+----------------------------------+---------------------------------|
+|      | *python*             |                                  |                                 |
+|------+----------------------+----------------------------------+---------------------------------|
+| 30/1 | [[https://www.datacamp.com/courses/intro-to-python-for-data-science][Intro to python]]      | bring your laptop to the lecture | [[../../Introduction_Lecture.html][Introduction Lecture]]            |
+| 4/2  |                      | assignment1.ipynb                | class1.ipynb                    |
+| 11/2 | [[https://www.datacamp.com/courses/intermediate-python-for-data-science][Intermediate python]]  |                                  |                                 |
+| 18/2 |                      | assignment2.ipynb                | class2.ipynb                    |
+| 25/2 | [[https://www.datacamp.com/courses/pandas-foundations][Pandas foundations]]   |                                  |                                 |
+| 11/3 |                      | assignment3.ipynb                | class3.ipynb                    |
+|------+----------------------+----------------------------------+---------------------------------|
+| 27/3 | *midterm python*     |                                  |                                 |
+|------+----------------------+----------------------------------+---------------------------------|
+|      | *R*                  |                                  |                                 |
+|------+----------------------+----------------------------------+---------------------------------|
+| 1/4  | [[https://www.datacamp.com/courses/free-introduction-to-r][Intro to R]]           |                                  |                                 |
+| 8/4  |                      | assignment4.ipynb                | class4a.ipynb and class4b.ipynb |
+| 15/4 | [[https://www.datacamp.com/courses/introduction-to-the-tidyverse][Intro to tidyverse]]   |                                  |                                 |
+| 22/4 |                      | assignment5.ipynb                | class5a.ipynb and class5b.ipynb |
+| 6/5  |                      | assignment6.ipynb                | class6a.ipynb and class6b.ipynb |
+| 20/5 | reserve              |                                  |                                 |
+|------+----------------------+----------------------------------+---------------------------------|
+| 5/6  | *exam R*             |                                  |                                 |
+|------+----------------------+----------------------------------+---------------------------------|
+| 5/7  | *resit python and R* |                                  |                                 |
+|------+----------------------+----------------------------------+---------------------------------|
+
+
+**Note** that the exam dates are the ones that are currently planned; but they may change. Also at this moment the exam times are not known.
+
+For the first lecture it is useful to bring your laptop if you have one. We will show you how to start the server and evaluate python in a jupyter notebook. 
+
+Also in the week of the first lecture, do the Datacamp course with the introduction to python (see link above).
+
+After the lecture, we have alternating weeks of classes and Datacamp. Before you come to class, you do the assignment notebook at home. In class we will do the class notebook together. The idea of this is that you can practice python while we are around to quickly answer your questions, help you with errors etc.
+
+Make sure that you have your notebooks complete before the exam. We will not publish solutions to the notebooks. But if you have your completed notebooks on the russet server, you are allowed to use copy/paste at the exam.
+
+In the week without a class, you do the Datacamp lecture at home. With Datacamp you learn the python syntax (what code to type). In class we teach you how to use python to solve economic problems.
+
+* Teaching philosophy
+
+We teach python/R in a way that may seem counter-intuitive to you at first sight. Our starting point is that you are not doing an engineering/IT degree; you are an economist. Hence, we are interested in economic applications; not so much in the details of the python/R language. 
+
+Of course, you need to learn the basics of the language, things like data-types, control structures etc. In other words, you need to know what a list is, a dictionary, a numpy array, a pandas dataframe, how to define functions, use list comprehension, if-then-else structures etc. 
+
+This "technical" part you mainly learn via Datacamp. There they teach you the details of the language such that you get the syntax right. By doing their exercises you learn to type python, recognize error messages (when you make mistakes).
+
+In class we then focus on applying these tools to economic problems. In class we also type python and we also make mistakes which generate errors. So there is an overlap with the Datacamp lectures, but the focus in class is different. Further, in economics we are interested in optimization (we tend to maximize profits, utility etc.) and solving equations (specifically, solving for fixed points which give us equilibria). For this we use numpy and scipy, which is not covered much at the Datacamp courses that we do.
+
+Many concepts you will first see at Datacamp and then we apply them in class. Sometimes it will be the other way around: we used something in class and you learn more details about it at Datacamp. This is perfectly fine. However, it is important that you keep up-to-date with Datacamp otherwise you are going to get lost. Also programming is something that you need to practice. You can do the same the Datacamp two or three times. Also the notebooks that we do in class, you can play around with these. Plot different functions, solve equations for different parameter values etc. Just looking at the answers that we give you in class will not help you to learn to use python/R.
+
+Finally, we urge you to use google (or other search engines like [[https://duckduckgo.com/][DuckDuckGo]]) and [[https://stackoverflow.com/][stackoverflow]] with your assignments. Some students find this weird at the beginning: should we not teach you everything that you need to know? The answer is no for a number of reasons. First, even professional programmers use google and stackoverflow all the time. If you are on [[https://www.quora.com/][Quora]]; see [[https://www.quora.com/Does-it-make-a-programmer-weak-for-using-Google-or-Stack-Overflow-when-coding][this post]] and [[https://www.quora.com/Do-programmers-know-programming-from-their-hearts-or-does-Google-remain-a-useful-tool][this one]]. Second, python and R are open source and lots of people work with it. If you encounter a problem, chances are that someone else had the same problem and knows the solution to it. There is not need to "invent the wheel". Use the resources available to you. If you copy a lot of code, you should add a reference. Finally, because python and R are open source, they develop rapidly. The things that we teach you now, will be obsolete in a couple of years time. Hence, you need to be able to find your way around also in 10 years time. To start practicing this, use google now.
+
+The only warning here is: at the exam you will not have access to the whole internet. So, also make sure that you can find help in the jupyter notebook. We will practice this in class.
+
